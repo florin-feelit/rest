@@ -41,26 +41,44 @@ class UsersController extends Controller
     /**
      * 
      * @param Request $request
-     * @return array
-     * @View()
+     * @View(statusCode=201)
      */
     public function postUserAction(Request $request)
     {
-        try
+        $user = new User();
+        $form = $this->createForm(new UserType(), $user, array(
+            'method' => 'POST',
+        ));
+        $form->handleRequest($request);
+        if($form->isValid())
         {
-            $user = new User();
-            $form = $this->createForm(new UserType(), $user, array(
-                'method' => 'POST',
-            ));
-            $form->handleRequest($request);
-            if($form->isValid())
-            {
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($user);
-                $em->flush();
-            }
-        } catch (Exception $ex) {
-            var_dump($ex->getMessage());
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
         }
+    }
+    
+    /**
+     * 
+     * @param User $user
+     * @param Request $request
+     * @View()
+     * @ParamConverter("user", class="AppDemoBundle:User")
+     */
+    public function putUserAction(User $user, Request $request)
+    {
+        $user = $this->getDoctrine()->getRepository('AppDemoBundle:User')->find($user);
+        $form = $this->createForm(new UserType(), $user, array(
+            'method' => 'PUT',
+        ));
+        $form->handleRequest($request);
+        if($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+        }
+        return array(
+            'user' => $user,
+        );
     }
 }
