@@ -1,0 +1,9 @@
+app_demo:
+    resource: "@AppDemoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+users:
+    type: rest
+    resource: App\DemoBundle\Controller\UsersController
+
