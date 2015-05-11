@@ -8,19 +8,17 @@ use App\DemoBundle\Entity\User;
 
 class LoadUserData implements FixtureInterface
 {
-    public function load(OjectManager $manager)
+    /**
+     * {@inheritDoc}
+     */
+    public function load(ObjectManager $manager)
     {
-        $thomas = new User();
-        $thomas->setUsername('thomas');
-        $thomas->setPassword('foothomaspassword');
-        $thomas->setEmail('thomas@example.com');
+        $user = new User();
+        $user->setUsername('test');
+        $user->setEmail('test@example.com');
+        $user->setPassword('testpassword');
+        $manager->persist($user);
         
-        $jerome = new User();
-        $jerome->setUsername('jerome');
-        $jerome->setPassword('foojeromepassword');
-        $jerome->setEmail('jerome@example.com');
-        $manager->persist($thomas);
-        $manager->persist($jerome);
         $manager->flush();
     }
 }

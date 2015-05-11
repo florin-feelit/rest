@@ -9,7 +9,7 @@
         }
     },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.3.3",
         "symfony/symfony": "2.7.*@dev",
         "doctrine/orm": "~2.2,>=2.2.3,<2.5",
         "doctrine/dbal": "<2.5",
@@ -23,7 +23,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/rest-bundle": "^1.5",
         "jms/serializer-bundle": "^0.13.0",
-        "doctrine/doctrine-fixtures-bundle": "^2.2"
+        "doctrine/doctrine-fixtures-bundle": "^2.2",
+        "guzzlehttp/guzzle": "~5.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
