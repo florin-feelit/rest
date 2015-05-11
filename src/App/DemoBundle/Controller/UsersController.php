@@ -81,4 +81,20 @@ class UsersController extends Controller
             'user' => $user,
         );
     }
+    
+    /**
+     * 
+     * @param User $user
+     * @View()
+     */
+    public function deleteUserAction(User $user)
+    {
+        $user = $this->getDoctrine()->getRepository('AppDemoBundle:User')->find($user);
+        if($user)
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($user);
+            $em->flush();
+        }
+    }
 }
