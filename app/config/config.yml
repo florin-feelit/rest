@@ -79,19 +79,11 @@ sensio_framework_extra:
 fos_rest:
     format_listener:
         rules:
-<<<<<<< HEAD
             - { priorities: ['json', 'xml', 'html'], fallback_format: json, prefer_extension: true }
-=======
-            - { priorities: ['json', 'xml'], fallback_format: json, prefer_extension: false }
->>>>>>> 8337af1a2aa1222ebc8cd71c0c11be9541d4a01b
     view:
         view_response_listener: true
         formats:
             xml: true
             json: true
-<<<<<<< HEAD
-            html: true
-=======
->>>>>>> 8337af1a2aa1222ebc8cd71c0c11be9541d4a01b
         templating_formats:
             html: true

@@ -13,20 +13,12 @@ class UsersController extends Controller
 {
     /**
      * 
-<<<<<<< HEAD
      * @return App\DemoBundle\Form\UserType
-=======
-     * @return array
->>>>>>> 8337af1a2aa1222ebc8cd71c0c11be9541d4a01b
      * @View()
      */
     public function newUsersAction()
     {
-<<<<<<< HEAD
         return $this->createForm(new UserType());
-=======
-        
->>>>>>> 8337af1a2aa1222ebc8cd71c0c11be9541d4a01b
     }
     /**
      * 
