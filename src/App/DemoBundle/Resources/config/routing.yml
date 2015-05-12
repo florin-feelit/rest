@@ -1,0 +1,7 @@
+homepage:
+    path:     /
+    defaults: { _controller: AppDemoBundle:Default:index }
+
+index:
+    path:     /index
+    defaults: { _controller: AppDemoBundle:Client:index }
