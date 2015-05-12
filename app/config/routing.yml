@@ -1,8 +1,8 @@
 app_demo:
     resource: "@AppDemoBundle/Controller/"
-    type:     annotation
-    prefix:   /
-    
+    type: annotation
+    prefix: /client
+
 users:
     type: rest
     resource: App\DemoBundle\Controller\UsersController

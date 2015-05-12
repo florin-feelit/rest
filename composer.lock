@@ -2111,12 +2111,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "daf4a03e5d94d69f522ced4bcafcce43bb10abed"
+                "reference": "7ec5b4fe1461a69fbc840e2c792b054a9d23b752"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/daf4a03e5d94d69f522ced4bcafcce43bb10abed",
-                "reference": "daf4a03e5d94d69f522ced4bcafcce43bb10abed",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7ec5b4fe1461a69fbc840e2c792b054a9d23b752",
+                "reference": "7ec5b4fe1461a69fbc840e2c792b054a9d23b752",
                 "shasum": ""
             },
             "require": {
@@ -2225,7 +2225,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-11 02:35:29"
+            "time": "2015-05-11 17:33:08"
         },
         {
             "name": "twig/extensions",

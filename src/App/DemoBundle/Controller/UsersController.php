@@ -16,6 +16,15 @@ class UsersController extends Controller
      * @return array
      * @View()
      */
+    public function newUsersAction()
+    {
+        
+    }
+    /**
+     * 
+     * @return array
+     * @View()
+     */
     public function getUsersAction()
     {
         $users = $this->getDoctrine()->getRepository('AppDemoBundle:User')->findAll();
@@ -43,7 +52,7 @@ class UsersController extends Controller
      * @param Request $request
      * @View(statusCode=201)
      */
-    public function postUserAction(Request $request)
+    public function postUsersAction(Request $request)
     {
         $user = new User();
         $form = $this->createForm(new UserType(), $user, array(
